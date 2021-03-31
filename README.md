@@ -22,7 +22,7 @@ Trouverは 気ままに旅を楽しむ + 行き忘れをなくす ために予�
 	* EC2
 * Rspec
 
-###テスト
+### テスト
 
 ### 機能一覧
 [チャレンジ機能一覧へ](https://docs.google.com/spreadsheets/d/1wtoO4Gqmq-3DD85Eyp4Ur_n9ePESO568cGIGGAifYLE/edit?usp=sharing)
