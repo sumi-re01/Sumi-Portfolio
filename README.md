@@ -1,5 +1,4 @@
 # Trouver(仮題)
-____
 
 ## サイト概要
 旅行の1日の日程を管理するアプリです。  
@@ -7,26 +6,25 @@ ____
 いろんな人たちと旅の記憶や見どころを共有してみてください！
 
 ### サイトテーマ
+「ちいさな発見も大事にする」サイト
+
+### テーマを選んだ理由
 xx:xx ◯◯に行く  
 xx:yy △△へ移動  
 ...  
 のような予定表だと思わぬ掘り出し場があったときに予定が練り直しにくい！と感じているかたも多いのではないでしょうか？  
-Trouverは 気ままに旅を楽しむ + 行き忘れをなくす ために予定を自由に動かして自由度の高い予定表を作成できる機能を持ったwebアプリケーションになっております。
+Trouverは 気ままに旅を楽しむ + やり忘れをなくす ために予定を動かして自由度の高い予定表を作成できる機能を持ったwebアプリケーションになっております。
 また投稿機能も備え、旅の最中にふらりと道を外れたら意外と良い場所があった！という体験を共有し、旅ライフを盛り上げられればと考えこのアプリケーションを作りました。
 
 
-### 使用技術
-* Ruby on Rails 2.6.3
-* Rails 5.2.5
-* AWS
-	* EC2
-* Rspec
+### ターゲットユーザ
+旅行が好きな人、柔軟に計画を変えたい人
 
-### テスト
+### 主な利用シーン
+旅行に行けない間に他の方の投稿を眺めたりすることで次の旅行のプランにつなげることができる。
+旅行中に1日の流れを一目でわかるように、急なアクシデントが起こっても自分のペースで楽しめる計画づくりに利用していただけます。
 
-### 機能一覧
-[チャレンジ機能一覧へ](https://docs.google.com/spreadsheets/d/1wtoO4Gqmq-3DD85Eyp4Ur_n9ePESO568cGIGGAifYLE/edit?usp=sharing)
-
+## 設計書
 * ユーザー登録/ログイン機能(devise)
 * 投稿機能
    * 画像投稿機能(ImageMagick, refile-mini_magick)
@@ -36,9 +34,16 @@ Trouverは 気ままに旅を楽しむ + 行き忘れをなくす ために予�
 * ブックマーク/お気に入り機能
 * 日程表(Ajax)
 
-### 設計書
+## チャレンジ要素一覧
+<https://docs.google.com/spreadsheets/d/1wtoO4Gqmq-3DD85Eyp4Ur_n9ePESO568cGIGGAifYLE/edit?usp=sharing>
 
-### 作成者
-![sumi-re01](https://avatars.githubusercontent.com/sumi-re01?s=40)
-[sumi-re01](https://github.com/sumi-re01)
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby(2.6.3),SQL
+- フレームワーク：Ruby on Rails(5.2.5)
+- JSライブラリ：jQuery
+- IDE：Cloud9
+
+## 使用素材
+
 
