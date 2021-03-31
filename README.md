@@ -31,6 +31,9 @@ Trouverは 気ままに旅を楽しむ + 行き忘れをなくす ために予�
 * 投稿機能
    * 画像投稿機能(ImageMagick, refile-mini_magick)
    * 動画の表示(youtube)
+* 検索機能
+* SNS認証機能
+* ブックマーク/お気に入り機能
 * 日程表(Ajax)
 
 ### 設計書
