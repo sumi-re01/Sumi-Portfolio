@@ -27,6 +27,9 @@ Trouverは 気ままに旅を楽しむ + やり忘れをなくす ために予�
 旅行中に1日の流れを一目でわかるように、急なアクシデントが起こっても自分のペースで楽しめる計画づくりに利用していただけます。
 
 ## 設計書
+![テーブル定義書](https://docs.google.com/spreadsheets/d/1dEdgay9_17TdhS86fL5NNz_GVxSBzqoNvfXdN3fBZXk/edit?usp=sharing)
+![ER図](https://drive.google.com/file/d/16swp0ExnWR12Az9YPqEz2Fh6hv6M00Ue/view?usp=sharing)
+
 * ユーザー登録/ログイン機能(devise)
 * 投稿機能
    * 画像投稿機能(ImageMagick, refile-mini_magick)
