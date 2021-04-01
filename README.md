@@ -39,7 +39,7 @@ Trouverは 気ままに旅を楽しむ + やり忘れをなくす ために予�
 * ブックマーク/お気に入り機能
 * 日程表(Ajax)
 
-## チャレンジ要素一覧
+## 機能一覧
 <https://docs.google.com/spreadsheets/d/1wtoO4Gqmq-3DD85Eyp4Ur_n9ePESO568cGIGGAifYLE/edit?usp=sharing>
 
 ## 開発環境
@@ -50,5 +50,5 @@ Trouverは 気ままに旅を楽しむ + やり忘れをなくす ために予�
 - IDE：Cloud9
 
 ## 使用素材
-
+[Logo Garden](https://www.logogarden.com)
 
