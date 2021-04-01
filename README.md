@@ -1,4 +1,6 @@
-# Trouver(仮題)
+# Trouver
+<img src="https://user-images.githubusercontent.com/76669464/113236119-451fb400-92df-11eb-8eb3-d03fbcf7a836.png" alt="img" align="center">
+
 
 ## サイト概要
 旅行の1日の日程を管理するアプリです。  
