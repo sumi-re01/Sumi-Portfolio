@@ -14,7 +14,7 @@
         <div class="menu">
             <nav>
               <ul class="nav-ul">
-
+              <% if user_signed_in? %>
                   <li class="nav-list">
                     <%= link_to 'TOP', root_path %>
                   </li>
@@ -27,8 +27,21 @@
                   <li class="nav-list">
                     <%= link_to 'FIRST VISIT', new_user_registration_path %>
                   </li>
-
-          </ul>
+              <% else %>
+                  <li class="nav-list">
+                    <%= link_to 'TOP', root_path %>
+                  </li>
+                  <li class="nav-list">
+                    <%= link_to 'GALLERY', galleries_path %>
+                  </li>
+                  <li class="nav-list">
+                    <%= link_to 'LOG IN',  new_user_session_path %>
+                  </li>
+                  <li class="nav-list">
+                    <%= link_to 'FIRST VISIT', new_user_registration_path %>
+                  </li>
+              <% end %>
+              </ul>
         </nav>
 
         <div class="logo"></div>
