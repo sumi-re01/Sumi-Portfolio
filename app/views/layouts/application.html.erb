@@ -9,7 +9,36 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="layout">
+    <header>
+        <div class="menu">
+            <nav>
+              <ul class="nav-ul">
+
+                  <li class="nav-list">
+                    <%= link_to 'TOP', root_path %>
+                  </li>
+                  <li class="nav-list">
+                    <%= link_to 'GALLERY', galleries_path %>
+                  </li>
+                  <li class="nav-list">
+                    <%= link_to 'LOG IN',  new_user_session_path %>
+                  </li>
+                  <li class="nav-list">
+                    <%= link_to 'FIRST VISIT', new_user_registration_path %>
+                  </li>
+
+          </ul>
+        </nav>
+
+        <div class="logo"></div>
+
+      </div>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
   </body>
 </html>
