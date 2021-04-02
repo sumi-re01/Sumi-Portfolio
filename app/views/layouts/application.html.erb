@@ -16,13 +16,16 @@
               <ul class="nav-ul">
               <% if user_signed_in? %>
                   <li class="nav-list">
-                    <%= link_to 'MY PAGE', galleries_path %>
+                    <%= link_to 'MY PAGE', galleries_path, class:"btn" %>
                   </li>
                   <li class="nav-list">
-                    <%= link_to 'ITINERARY',  travels_path %>
+                    <%= link_to 'ITINERARY',  travels_path, class:"btn" %>
                   </li>
                   <li class="nav-list">
-                    <%= link_to 'GALLERY', galleries_path %>
+                    <%= link_to 'GALLERY', galleries_path, class:"btn" %>
+                  </li>
+                  <li class="nav-list">
+                    <%= link_to 'LOG OUT', destroy_user_session_path, method :delete, class:"btn" %>
                   </li>
               <% else %>
                   <li class="nav-list">
@@ -46,7 +49,7 @@
       </div>
     </header>
 
-    <main>
+    <main class ="main-field">
       <%= yield %>
     </main>
 
