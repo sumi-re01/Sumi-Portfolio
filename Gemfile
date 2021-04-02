@@ -60,22 +60,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-#devise
-gem 'devise'
-
-# jQuery
-gem 'jquery-rails'
-
-#画像投稿
-gem "refile", require: "refile/rails", github: 'manfe/refile'
-gem "refile-mini_magick"
-
-# 地図　住所→緯度経度
-gem 'geocoder'
-
-#SNS認証(google)
-gem 'omniauth-google-oauth2'
-
-# カレンダー
-gem "simple_calendar", "~> 2.4"
