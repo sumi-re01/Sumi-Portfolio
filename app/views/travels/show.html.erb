@@ -1,0 +1,30 @@
+<div class="container">
+  <div id="travel">
+    <h1 class="page-name"><%= @travel.date %></h1>
+        <div class="plan-form">
+          <%= form_with model: [@travel, @travel_plan], url: travel_travel_plans_path(@travel), remote: true do |f| %>
+          <div class="form">
+              <%= f.text_field :plan %>
+          </div>
+          <div class="btn">
+              <%= f.submit 'Add' %>
+          </div>
+          <% end %>
+        </div>
+
+        <div class="plans">
+          <h2>Plan:<%= @travel.itinerary %></h2>
+
+          <ul id="travel_box">
+            <% @travel_plans.each do |travel_plan| %>
+              <li class="travel_item">
+                <%= travel_plan.plan %>  <%=link_to '✖', travel_travel_plan_path(travel_plan.id), method: :delete %>
+              </li>
+
+            <% end %>
+          </ul>
+          <%= hidden_field_tag :travel_id, @travel.id %>
+        </div>
+
+  </div>
+</div>
