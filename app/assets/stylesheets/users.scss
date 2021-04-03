@@ -11,16 +11,13 @@
 }
 
 #user {
-  width: 500px;
-  margin: 0 auto;
 
-  & .profile-image {
-    display: inline-block;
+  & .profile-wrap {
+    display: flex;
+    justify-content: center;
   }
-
-  & .profile-index {
-    height: 150px;
-    display: inline-block;
+  & .name {
+    margin-bottom: 50px;
   }
 
   & .btn {
