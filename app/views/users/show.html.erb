@@ -1,0 +1,15 @@
+<div class="container">
+  <div id="user">
+      <h1 class="page-name">MY PAGE</h1>
+        <div class="profile-wrap">
+            <%= attachment_image_tag @user, :profile_image, format: 'jpg', fallback: "no-image.jpeg", id: "prf-img" %>
+          <div class="profile-index">
+            <div class="name"><%= @user.name %></div>
+            <span class="btn">ブックマーク</span>
+            <%= link_to 'EDIT', edit_user_path(@user.id), class: "btn" %>
+          </div>
+        </div>
+
+
+  </div>
+</div>
