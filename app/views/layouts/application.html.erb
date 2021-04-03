@@ -16,7 +16,7 @@
               <ul class="nav-ul">
               <% if user_signed_in? %>
                   <li class="nav-list">
-                    <%= link_to 'MY PAGE', galleries_path, class:"btn" %>
+                    <%= link_to 'MY PAGE', user_path(current_user.id), class:"btn" %>
                   </li>
                   <li class="nav-list">
                     <%= link_to 'ITINERARY',  travels_path, class:"btn" %>
