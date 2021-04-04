@@ -1,3 +1,25 @@
 // Place all the styles related to the galleries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#img {
+  width: 560px;
+  height: 315px;
+}
+
+.gallery__box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery__items {
+  margin: 5px;
+  width: 200px;
+  height: 300px;
+}
+
+.gallery__image {
+  width: 200px;
+  height: 200px;
+}

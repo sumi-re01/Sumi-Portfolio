@@ -16,29 +16,29 @@
               <ul class="nav-ul">
               <% if user_signed_in? %>
                   <li class="nav-list">
-                    <%= link_to 'MY PAGE', user_path(current_user.id), class:"btn" %>
+                    <%= link_to 'MY PAGE', user_path(current_user.id), class:"nav-btn" %>
                   </li>
                   <li class="nav-list">
-                    <%= link_to 'ITINERARY',  travels_path, class:"btn" %>
+                    <%= link_to 'ITINERARY',  travels_path, class:"nav-btn" %>
                   </li>
                   <li class="nav-list">
-                    <%= link_to 'GALLERY', galleries_path, class:"btn" %>
+                    <%= link_to 'GALLERY', galleries_path, class:"nav-btn" %>
                   </li>
                   <li class="nav-list">
-                    <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:"btn" %>
+                    <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:"nav-btn" %>
                   </li>
               <% else %>
                   <li class="nav-list">
-                    <%= link_to 'TOP', root_path, class:"btn" %>
+                    <%= link_to 'TOP', root_path, class:"nav-btn" %>
                   </li>
                   <li class="nav-list">
-                    <%= link_to 'GALLERY', galleries_path, class:"btn" %>
+                    <%= link_to 'GALLERY', galleries_path, class:"nav-btn" %>
                   </li>
                   <li class="nav-list">
-                    <%= link_to 'LOG IN',  new_user_session_path, class:"btn" %>
+                    <%= link_to 'LOG IN',  new_user_session_path, class:"nav-btn" %>
                   </li>
                   <li class="nav-list">
-                    <%= link_to 'FIRST VISIT', new_user_registration_path, class:"btn" %>
+                    <%= link_to 'FIRST VISIT', new_user_registration_path, class:"nav-btn" %>
                   </li>
               <% end %>
               </ul>

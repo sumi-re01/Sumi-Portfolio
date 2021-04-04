@@ -1,0 +1,19 @@
+<div class="container">
+  <div id="gallery">
+    <h1 class="page-name"></h1>
+
+    <div class="gallery__content">
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @gallery.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <%= attachment_image_tag @gallery, :image, format: 'jpg', fallback: "no-image.jpeg", id: "img" %>
+
+    </div>
+    <div class="gallery__body">
+
+      <%= @gallery.title %>
+      <%= @gallery.text %>
+      <%= @gallery.region %>
+
+    </div>
+  </div>
+</div>

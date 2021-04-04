@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :find_user
 
   def show
+    @galleries = @user.galleries.all
   end
 
   def edit

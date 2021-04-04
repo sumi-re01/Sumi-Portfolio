@@ -14,8 +14,9 @@
  *= require_self
  */
  $back-color: #67c7c4;
- $link-color: black;
+ $link-color: #67c7c4;
  $btn-back: #e0faff;
+ $text-color: black;
 
  * {
    margin: 0;
@@ -29,15 +30,17 @@
 }
 
  .layout {
-  position: relative;
-  background-color: $btn-back;
+   color: $text-color;
+   font-family: 'Source Code Pro', monospace;
+   position: relative;
+   background-color: $btn-back;
  }
 
  // main画面位置
 
 .main-field {
   margin-top: 25px;
-  padding-left: 150px;
+  padding-left: 200px;
 }
 
 .container {
@@ -51,7 +54,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 150px;
+    width: 200px;
     background-color: $back-color;
   }
 
@@ -63,10 +66,10 @@
  .nav-list {
     list-style: none;
 
-  .btn {
+  .nav-btn {
     width: 80%;
     display: inline-block;
-    margin: 5px auto;
+    margin: 8px auto;
     padding: 4%;
     background-color: $btn-back;
     transition: all 0.3s;
@@ -90,3 +93,19 @@
 .page-name {
   font-weight: 400;
 }
+
+// フォームスタイル
+ .form-group {
+   margin-top: 20px;
+ }
+ .form-item {
+   margin: 10px auto;
+ }
+ .form-btn {
+   margin-top: 20px;
+   color: $link-color;
+   background-color: white;
+   border-radius: 3px;
+   padding: 5px 10px;
+   border: 1px solid white;
+ }

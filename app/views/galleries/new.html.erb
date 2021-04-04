@@ -1,0 +1,34 @@
+<div class="container">
+  <div id="gallery">
+     <h1 class="page-name">Let's share the WORLD</h1>
+      <div class="form-group">
+          <%= form_with model:@gallery, local: true do |f| %>
+
+          <%= render 'layouts/errors', model: f.object %>
+
+          <div class="form-item">
+             <%= f.label :image, "Photo" %>
+             <%= f.attachment_field :image %>
+          </div>
+          <div class="form-item">
+             <%= f.label :title %>
+             <%= f.text_field :title %>
+          </div>
+          <div class="form-item">
+             <%= f.label :text, "Body" %>
+             <%= f.text_area :text %>
+          </div>
+          <div class="form-item">
+             <%= f.label :address, "Where?" %>
+             <%= f.text_field :address %>
+          </div>
+          <div class="form-item">
+             <%= f.label :youtube_url, "Youtube URL" %>
+             <%= f.text_field :youtube_url %>
+          </div>
+             <%= f.submit "Submit", class:"form-btn" %>
+
+          <% end %>
+      </div>
+  </div>
+</div>

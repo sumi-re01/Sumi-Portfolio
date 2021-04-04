@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_04_02_030653) do
     t.string "text", null: false
     t.string "image_id", null: false
     t.string "youtube_url"
-    t.integer "region", null: false
+    t.integer "region"
     t.string "address"
     t.float "latitude"
     t.float "longitude"
