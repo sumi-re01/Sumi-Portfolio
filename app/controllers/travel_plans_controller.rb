@@ -7,10 +7,11 @@ class TravelPlansController < ApplicationController
   end
 
   def update
-    
+
   end
 
   def destroy
+    TravelPlan.find_by(id: params[:id], travel_id: params[:travel_id]).destroy
   end
 
   private

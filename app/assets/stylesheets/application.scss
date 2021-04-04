@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
- $back-color: #e0faff;
+ $back-color: #67c7c4;
  $link-color: black;
+ $btn-back: #e0faff;
 
  * {
    margin: 0;
@@ -29,16 +30,28 @@
 
  .layout {
   position: relative;
+  background-color: $btn-back;
  }
+
+ // main画面位置
+
+.main-field {
+  margin-top: 25px;
+  padding-left: 150px;
+}
+
+.container {
+  margin-left: 20px;
+}
 
 
 // header
 .menu {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     bottom: 0;
-    width: 250px;
+    width: 150px;
     background-color: $back-color;
   }
 
@@ -51,11 +64,11 @@
     list-style: none;
 
   .btn {
-    width: 70%;
+    width: 80%;
     display: inline-block;
-    margin: 2px auto;
-    padding: 13% 4%;
-    background-color: #67c7c4;
+    margin: 5px auto;
+    padding: 4%;
+    background-color: $btn-back;
     transition: all 0.3s;
 
     &:hover {
@@ -70,17 +83,10 @@
   .logo {
     position: absolute;
     bottom: 50px;
-    width: 250px;
+    width: 100%;
   }
 
-
-// main
-
-.main-field {
-  padding-right: 250px;
-}
-
 // ページ名
-h1 .page-name {
-  font-weight: 600;
+.page-name {
+  font-weight: 400;
 }
