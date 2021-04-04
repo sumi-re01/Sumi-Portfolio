@@ -64,6 +64,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #devise
 gem 'devise'
 
+# Bootstra@
+gem 'bootstrap', '~> 4.5'
+
 # jQuery
 gem 'jquery-rails'
 
@@ -79,3 +82,14 @@ gem 'omniauth-google-oauth2'
 
 # カレンダー
 gem "simple_calendar", "~> 2.4"
+
+# 計画表順番
+# gem 'acts_as_list'
+# gem 'jquery-ui-rails'
+# gem 'ranked-model'
+
+# バグ
+gem 'pry-byebug'
+
+# Bootstrap
+gem 'bootstrap', '~> 4.5'

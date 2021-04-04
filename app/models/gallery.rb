@@ -10,7 +10,7 @@ class Gallery < ApplicationRecord
   attachment :image
 
   def marked_by?
-    marks.where(user_id. user.id).exists?
+    marks.where(user_id. user.id).exists
   end
 
 end
