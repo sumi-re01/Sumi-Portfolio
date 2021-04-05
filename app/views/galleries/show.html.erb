@@ -4,18 +4,26 @@
 
     <div class="gallery__wrap">
       <div class="gallery__left">
-          <h2 class="gallery__title">
-              <%= @gallery.title %>
-          </h2>
-          <p class="gallery__body">
-              <%= @gallery.text %>
-          </p>
 
-          <%= link_to "EDIT", edit_gallery_path(@gallery.id) %>
+          <h2 class="gallery__title"><%= @gallery.title %></h2>
+          <p class="gallery__body"><%= @gallery.text %><br /><%= l @gallery.created_at, format: :short %></p>
+
+          <% if @gallery.user_id == current_user.id %>
+            <%= link_to "EDIT", edit_gallery_path(@gallery.id) %>
+            <%= link_to "DELETE", gallery_path(@gallery.id), method: :delete, data: {comfirm: "記事を削除しますか？"} %>
+          <% end %>
 
           <%= @gallery.region %>
 
           <div id='map'></div>
+          <script>
+            function initMap(){
+              let map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: #{@gallery.latitude}, lng: lng: #{@gallery.longitude} },
+                zoom: 8
+              });
+            }
+          </script>
       </div>
 
       <div class="gallery__right">
@@ -24,7 +32,7 @@
       </div>
     </div>
 
-      <!--Google Map-->
-      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY']%>&callback=initMap&libraries=&v=weekly"async></script>
+    <!--Google Map-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY'] %>&callback=initMap&libraries=&v=weekly"async></script>
   </div>
 </div>

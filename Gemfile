@@ -75,7 +75,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 # 地図　住所→緯度経度
-# gem 'geocoder'
+gem 'geocoder'
 
 #SNS認証(google)
 gem 'omniauth-google-oauth2'

@@ -4,10 +4,13 @@ class Gallery < ApplicationRecord
   has_many :marks, dependent: :destroy
 
   validates :title, presence: true
-  validates :text, length: { minimum: 2, maximum: 200 }
+  validates :text, length: { minimum: 5 }
   validates :image, presence: true
 
   attachment :image
+
+  geocoded_by :address
+  after_validation :geocode
 
   def marked_by?
     marks.where(user_id. user.id).exists

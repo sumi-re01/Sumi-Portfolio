@@ -1,6 +1,6 @@
 class GalleriesController < ApplicationController
 
-before_action :gallery_find, only: [:show, :edit, :update]
+before_action :gallery_find, only: [:show, :edit, :update, :destroy]
 
   def show
   end
@@ -40,6 +40,11 @@ before_action :gallery_find, only: [:show, :edit, :update]
     end
   end
 
+  def destroy
+    @gallery.destroy
+    redirect_to user_path(current_user.id)
+  end
+
   private
 
   def gallery_find
@@ -47,7 +52,7 @@ before_action :gallery_find, only: [:show, :edit, :update]
   end
 
   def gallery_params
-    params.require(:gallery).permit(:title, :text, :image, :youtube_url, :region, :address)
+    params.require(:gallery).permit(:title, :text, :image, :youtube_url, :region, :address, :latitude, :longitude)
   end
 
 end
