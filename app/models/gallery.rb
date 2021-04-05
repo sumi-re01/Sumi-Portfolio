@@ -5,7 +5,7 @@ class Gallery < ApplicationRecord
 
   validates :title, presence: true
   validates :text, length: { minimum: 2, maximum: 200 }
-  validates :imge, presence: true
+  validates :image, presence: true
 
   attachment :image
 

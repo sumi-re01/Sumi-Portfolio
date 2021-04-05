@@ -1,0 +1,30 @@
+<div class="container">
+  <div id="gallery">
+    <h1 class="page-name"></h1>
+
+    <div class="gallery__wrap">
+      <div class="gallery__left">
+          <h2 class="gallery__title">
+              <%= @gallery.title %>
+          </h2>
+          <p class="gallery__body">
+              <%= @gallery.text %>
+          </p>
+
+          <%= link_to "EDIT", edit_gallery_path(@gallery.id) %>
+
+          <%= @gallery.region %>
+
+          <div id='map'></div>
+      </div>
+
+      <div class="gallery__right">
+          <%= attachment_image_tag @gallery, :image, format: 'jpg', fallback: "no-image.jpeg", id: "img" %>
+          <iframe width="100%" height="256px" src="https://www.youtube.com/embed/<%= @gallery.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+      <!--Google Map-->
+      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY']%>&callback=initMap&libraries=&v=weekly"async></script>
+  </div>
+</div>

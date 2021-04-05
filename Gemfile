@@ -75,7 +75,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 # 地図　住所→緯度経度
-gem 'geocoder'
+# gem 'geocoder'
 
 #SNS認証(google)
 gem 'omniauth-google-oauth2'
@@ -85,11 +85,12 @@ gem "simple_calendar", "~> 2.4"
 
 # 計画表順番
 # gem 'acts_as_list'
-# gem 'jquery-ui-rails'
-# gem 'ranked-model'
 
 # バグ
 gem 'pry-byebug'
 
 # Bootstrap
 gem 'bootstrap', '~> 4.5'
+
+# 環境変数
+gem 'dotenv-rails'

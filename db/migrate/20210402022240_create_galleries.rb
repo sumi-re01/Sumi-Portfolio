@@ -6,7 +6,7 @@ class CreateGalleries < ActiveRecord::Migration[5.2]
       t.string :text, null: false
       t.string :image_id, null: false
       t.string :youtube_url
-      t.integer :region, null: false
+      t.integer :region
       t.string :address
       t.float :latitude
       t.float :longitude
