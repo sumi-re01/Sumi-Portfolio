@@ -2,11 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#img {
-  width: 560px;
-  height: 315px;
+
+// 詳細画面
+
+.gallery__wrap {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.gallery__left {
+  width: 60%;
+}
+
+.gallery__right {
+  width: 40%;
+
+  #img {
+    width: 100%;
+  }
+
+  #map {
+    width: 100%;
+    height: 300px;
+  }
+
+}
+
+
+// 一覧画面
 .gallery__box {
   width: 100%;
   display: flex;

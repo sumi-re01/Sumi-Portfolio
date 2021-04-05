@@ -34,9 +34,8 @@ before_action :gallery_find, only: [:show, :edit, :update]
 
   def update
     if @gallery.update(gallery_params)
-      redirect_to gallery_path(gallery.id)
+      redirect_to gallery_path(@gallery.id)
     else
-      @gallery = Gallery.find(params[id])
       render :edit
     end
   end

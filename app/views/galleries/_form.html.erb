@@ -1,0 +1,30 @@
+<div class="form__group">
+  <%= form_with model:gallery, local: true do |f| %>
+
+  <%= render 'layouts/errors', model: f.object %>
+
+    <%= f.label :image, "Photo" %>
+      <div class="form__item">
+        <%= f.attachment_field :image %>
+      </div>
+    <%= f.label :title %>
+      <div class="form__item">
+        <%= f.text_field :title, class:"form__field"%>
+      </div>
+    <%= f.label :text, "Body" %>
+      <div class="form__item">
+        <%= f.text_area :text, class:"form__area" %>
+      </div>
+    <%= f.label :address, "Where?" %>
+      <div class="form__item">
+        <%= f.text_field :address, class:"form__field" %>
+      </div>
+    <%= f.label :youtube_url, "Youtube URL" %>
+      <div class="form__item">
+        <%= f.text_field :youtube_url, class:"form__field" %>
+      </div>
+
+    <%= f.submit "Submit", class:"form__btn" %>
+
+  <% end %>
+</div>
