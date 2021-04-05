@@ -1,7 +1,12 @@
 function initMap() {
   /* global google */
-  new google.maps.Map(document.getElementById("map"), {
-    center: { lat: Number(window.lat), lng: Number(window.lng) },
-    zoom: 8,
+  const myLatLng = { lat: Number(window.lat), lng: Number(window.lng) };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: myLatLng,
+  });
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
   });
 }
