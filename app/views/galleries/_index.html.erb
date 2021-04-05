@@ -1,8 +1,0 @@
-<div class="gallery__box">
-    <% @galleries.each do |gallery| %>
-      <div class="gallery__items">
-        <%= attachment_image_tag gallery, :image, format: 'jpg', fallback: "no-image.jpeg", class:"gallery__image" %>
-        <%= link_to gallery.created_at, gallery_path(gallery.id) %>
-      </div>
-    <% end %>
-</div>
