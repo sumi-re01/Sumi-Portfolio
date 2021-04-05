@@ -1,0 +1,33 @@
+<div class="container">
+  <div id="travel">
+    <h1 class="page-name">ITINERARY</h1>
+
+    <div class="travel-form-box">
+      <%= form_with model:@travel, url: travels_path, local:true do |f| %>
+      <div class="form">
+          <%= f.label :itinerary %>
+          <%= f.text_field :itinerary %>
+      </div>
+      <div class="form">
+          <%= f.label :date %>
+          <%= f.date_field :date %>
+      </div>
+      <div class="btn">
+          <%= f.submit 'CREATE' %>
+      </div>
+      <% end %>
+    </div>
+
+
+    <table>
+    <% @travels.each do |travel| %>
+      <tr>
+        <td><%= travel.date %></td>
+        <td><%= link_to travel.itinerary, travel_path(travel.id) %></td>
+        <td><%= link_to 'DELETE',  travel_path(travel.id), method: :destroy, class:"btn" %></td>
+      </tr>
+    <% end %>
+    </table>
+
+  </div>
+</div>
