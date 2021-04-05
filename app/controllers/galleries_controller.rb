@@ -1,5 +1,4 @@
 class GalleriesController < ApplicationController
-
 before_action :gallery_find, only: [:show, :edit, :update, :destroy]
 
   def show

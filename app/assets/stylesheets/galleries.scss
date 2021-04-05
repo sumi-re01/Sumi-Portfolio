@@ -14,14 +14,18 @@
   width: 60%;
   padding-right: 10px;
 
-  & .gallery__title {
+   .gallery__title {
     margin-bottom: 20px;
   }
 
-  & .gallery__body {
+   .gallery__body {
     white-space: pre-wrap;
     padding: 30px;
     background-color: white;
+  }
+
+  .gallery__region {
+    margin-top: 20px;
   }
 
   #map {

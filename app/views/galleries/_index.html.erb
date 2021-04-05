@@ -2,7 +2,9 @@
     <% @galleries.each do |gallery| %>
       <div class="gallery__items">
         <%= attachment_image_tag gallery, :image, format: 'jpg', fallback: "no-image.jpeg", class:"gallery__image" %>
-        <%= link_to gallery.created_at, gallery_path(gallery.id) %>
+        <%= link_to gallery_path(gallery.id) do %>
+          <%= l gallery.created_at %>
+        <% end %>
       </div>
     <% end %>
 </div>

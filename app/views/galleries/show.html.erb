@@ -13,17 +13,11 @@
             <%= link_to "DELETE", gallery_path(@gallery.id), method: :delete, data: {comfirm: "記事を削除しますか？"} %>
           <% end %>
 
-          <%= @gallery.region %>
+          <div class="gallery__region">
+            <%= @gallery.region %>
+          </div>
 
           <div id='map'></div>
-          <script>
-            function initMap(){
-              let map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: #{@gallery.latitude}, lng: lng: #{@gallery.longitude} },
-                zoom: 8
-              });
-            }
-          </script>
       </div>
 
       <div class="gallery__right">
@@ -32,7 +26,14 @@
       </div>
     </div>
 
-    <!--Google Map-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY'] %>&callback=initMap&libraries=&v=weekly"async></script>
+    <!--緯度経度をgalleries.jsに渡す-->
+    <%= javascript_tag do %>
+      window.lat = '<%= @gallery.latitude %>';
+      window.lng = '<%= @gallery.longitude %>';
+    <% end %>
+
+    <%= javascript_include_tag 'galleries' %>
+    <!--GOOGLE　MAP API-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['MAP_API_KEY'] %>&callback=initMap&libraries=&v=weekly"async></script>
   </div>
 </div>
