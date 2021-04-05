@@ -4,16 +4,18 @@
 
     <div class="gallery__wrap">
       <div class="gallery__left">
-          <h2 class="gallery__title">
-              <%= @gallery.title %>
-          </h2>
-          <p class="gallery__body">
-              <%= @gallery.text %>
-          </p>
 
-          <%= link_to "EDIT", edit_gallery_path(@gallery.id) %>
+          <h2 class="gallery__title"><%= @gallery.title %></h2>
+          <p class="gallery__body"><%= @gallery.text %><br /><%= l @gallery.created_at, format: :short %></p>
 
-          <%= @gallery.region %>
+          <% if @gallery.user_id == current_user.id %>
+            <%= link_to "EDIT", edit_gallery_path(@gallery.id) %>
+            <%= link_to "DELETE", gallery_path(@gallery.id), method: :delete, data: {comfirm: "記事を削除しますか？"} %>
+          <% end %>
+
+          <div class="gallery__region">
+            <%= @gallery.region %>
+          </div>
 
           <div id='map'></div>
       </div>
@@ -24,7 +26,14 @@
       </div>
     </div>
 
-      <!--Google Map-->
-      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_API_KEY']%>&callback=initMap&libraries=&v=weekly"async></script>
+    <!--緯度経度をgalleries.jsに渡す-->
+    <%= javascript_tag do %>
+      window.lat = '<%= @gallery.latitude %>';
+      window.lng = '<%= @gallery.longitude %>';
+    <% end %>
+
+    <%= javascript_include_tag 'galleries' %>
+    <!--GOOGLE　MAP API-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['MAP_API_KEY'] %>&callback=initMap&libraries=&v=weekly"async></script>
   </div>
 </div>
