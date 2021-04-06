@@ -14,7 +14,7 @@ class User < ApplicationRecord
   validates :email, {presence: true, format: { with: VALID_EMAIL_REGEX }}
 
   attachment :profile_image
-  
+
 
   def self.from_omniauth(auth)
   sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
@@ -29,8 +29,8 @@ class User < ApplicationRecord
     end
     { user: user, sns: sns }
   end
-  
-  # uidとproviderをuserテーブルに入れた時はこっちで良い
+
+  # uidとproviderをuserテーブルに入れた時はこっち
   #   def self.from_omniauth(auth)
   #   self.where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
   #     user.email = auth.info.email

@@ -43,8 +43,9 @@
      <% end %>
 
      <%= link_to "Log in", new_session_path(resource_name) %><br />
-     <%= link_to 'Sign up with Twitter', user_twitter_omniauth_authorize_path, method: :post %><br />
-     <%= link_to 'Sign up with Google', user_google_oauth2_omniauth_authorize_path, method: :post %>
+     <%= link_to 'Sign up with Twitter', user_twitter_omniauth_authorize_path %><br />
+     <%= link_to 'Sign up with Google', user_google_oauth2_omniauth_authorize_path %>
+
 
     </div>
   </div>
