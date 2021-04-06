@@ -1,5 +1,4 @@
 class TravelsController < ApplicationController
-before_action :find_travel, only: [:show, :sort]
 
   def index
     @travel = Travel.new
@@ -18,6 +17,7 @@ before_action :find_travel, only: [:show, :sort]
 
   def show
     @travel_plan = TravelPlan.new
+    @travel = Travel.find(params[:id])
     @travel_plans = @travel.travel_plans
   end
 
@@ -32,8 +32,4 @@ before_action :find_travel, only: [:show, :sort]
     params.require(:travel_plan).permit(:plan, :position)
   end
 
-
-  def find_travel
-    @travel = Travel.find(params[:id])
-  end
 end

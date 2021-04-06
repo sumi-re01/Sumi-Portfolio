@@ -2,18 +2,18 @@
   <div id="travel">
     <h1 class="page-name">ITINERARY</h1>
 
-    <div class="travel-form-box">
+    <div class="travel__form">
       <%= form_with model:@travel, url: travels_path, local:true do |f| %>
-      <div class="form">
-          <%= f.label :itinerary %>
-          <%= f.text_field :itinerary %>
+      <div class="form__item">
+          <%= f.label :itinerary %><br />
+          <%= f.text_field :itinerary, class:"plan__field" %>
       </div>
-      <div class="form">
-          <%= f.label :date %>
+      <div class="form__item">
+          <%= f.label :date %><br />
           <%= f.date_field :date %>
       </div>
-      <div class="btn">
-          <%= f.submit 'CREATE' %>
+      <div class="form__item">
+          <%= f.submit 'CREATE', class:"form__btn" %>
       </div>
       <% end %>
     </div>

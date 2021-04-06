@@ -89,7 +89,7 @@ gem 'omniauth-github'
 gem "simple_calendar", "~> 2.4"
 
 # 計画表順番
-# gem 'acts_as_list'
+gem 'acts_as_list'
 
 # バグ
 gem 'pry-byebug'

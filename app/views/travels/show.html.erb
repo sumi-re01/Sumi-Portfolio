@@ -1,33 +1,24 @@
 <div class="container">
+
+  <h1 class="page-name"><%= @travel.date %></h1>
+
   <div id="travel">
-    <h1 class="page-name"><%= @travel.date %></h1>
-        <div class="plan__form">
+        <div id="travel__form">
           <%= form_with model: [@travel, @travel_plan], url: travel_travel_plans_path(@travel), remote: true do |f| %>
-          <div class="form__field">
-              <%= f.text_field :plan %>
-          </div>
-          <div class="form__btn">
-              <%= f.submit 'Add' %>
+          <div class="form__item">
+              <%= f.text_area :plan ,class:"plan__field"%><br />
+              <%= f.submit 'Add',class:"plan__btn" %>
           </div>
           <% end %>
         </div>
 
-        <div class="travel__plans">
+        <div id="travel__plans">
           <h2>Plan:<%= @travel.itinerary %></h2>
 
-          <table id="plan__box">
-            <% @travel_plans.each do |travel_plan| %>
-            <tr class="plan__wrap">
-               <td class="plan__item">
-                 <%= travel_plan.plan %>
-               </td>
-               <td class="plan__item">
-                 <%=link_to '✖', travel_travel_plan_path(travel_plan.id), method: :delete %>
-               </td>
-            </tr>
-            <% end %>
-          </table>
-          <%= hidden_field_tag :travel_id, @travel.id %>
+          <div id="plans_index">
+            <%= render 'travels/plans', travel_plans: @travel_plans %>
+          </div>
+
         </div>
 
   </div>

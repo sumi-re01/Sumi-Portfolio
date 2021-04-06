@@ -123,3 +123,51 @@
    padding: 5px 10px;
    border: 1px solid white;
  }
+
+
+// travel
+
+#travel {
+  display: flex;
+  flex-wrap: wrap;
+
+  #travel__form {
+    width:230px;
+
+    .plan__field {
+      width: 200px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .plan__btn {
+      border-radius: 5px;
+      width: 200px;
+      height: 30px;
+      color: white;
+      background-color: $link-color;
+    }
+  }
+
+
+  #travel__plans {
+
+    width: 60%;
+
+    .plan__box {
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    .plan__wrap {
+      background-color: white;
+      border: 1px solid black;
+    }
+    .plan__item {
+      display: inline-block;
+      padding: 5px 10px;
+    }
+
+  }
+
+}
