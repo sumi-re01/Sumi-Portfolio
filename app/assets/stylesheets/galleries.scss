@@ -57,7 +57,11 @@
   height: 300px;
 }
 
-.gallery__image {
-  width: 200px;
-  height: 200px;
+.gallery__image_box {
+
+  .gallery__image_item {
+    width: 200px;
+    height: 200px;
+  }
+
 }

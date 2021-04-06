@@ -10,7 +10,7 @@ class Gallery < ApplicationRecord
   attachment :image
 
   geocoded_by :address
-  after_validation :geocode
+  after_validation :geocode, :if => :address_changed?
 
   def marked_by?
     marks.where(user_id. user.id).exists
