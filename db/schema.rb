@@ -34,12 +34,11 @@ ActiveRecord::Schema.define(version: 2021_04_02_030653) do
   end
 
   create_table "sns_credentials", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.string "provider", null: false
     t.string "uid", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "travel_plans", force: :cascade do |t|

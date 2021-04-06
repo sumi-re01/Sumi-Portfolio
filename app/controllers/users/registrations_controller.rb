@@ -13,8 +13,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     if params[:sns_auth] == 'true'
       # パスワード生成
-      pass = Devise.friendry_token[0,20]
+      pass = Devise.friendly_token[0,20]
       params[:user][:password_confirmation] = pass
+      params[:user][:password] = pass
     end
     super
   end
