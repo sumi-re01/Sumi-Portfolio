@@ -1,0 +1,12 @@
+<div class="plan__box">
+  <% travel_plans.each do |travel_plan| %>
+   <div class="plan__wrap">
+     <div class="plan__item">
+        <%= travel_plan.plan %>
+     </div>
+     <div class="plan__item">
+        <%=link_to '✖', travel_travel_plan_path(travel_plan.id), method: :delete, remote:true %>
+     </div>
+   </div>
+  <% end %>
+</div>

@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :galleries, only: [:index, :new, :create, :edit, :update, :show, :destroy]
     resources :marks, only: [:create, :destroy]
     resources :travels, only: [:index, :new, :create, :show, :destroy] do
-      put :sort
       resources :travel_plans, only: [:create, :update, :destroy]
     end
 
