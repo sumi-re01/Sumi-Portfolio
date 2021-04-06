@@ -3,24 +3,28 @@
 
   <%= render 'layouts/errors', model: f.object %>
 
-    <%= f.label :image, "Photo" %>
       <div class="form__item">
+        <%= f.label :image, "Photo" %><br />
         <%= f.attachment_field :image %>
       </div>
-    <%= f.label :title %>
+
       <div class="form__item">
+        <%= f.label :title %><br />
         <%= f.text_field :title, class:"form__field"%>
       </div>
-    <%= f.label :text, "Body" %>
+
       <div class="form__item">
+        <%= f.label :text, "Body" %><br />
         <%= f.text_area :text, class:"form__area" %>
       </div>
-    <%= f.label :address, "Where?" %>
+
       <div class="form__item">
+        <%= f.label :address, "Where?" %><br />
         <%= f.text_field :address, class:"form__field" %>
       </div>
-    <%= f.label :youtube_url, "Youtube URL" %>
+
       <div class="form__item">
+        <%= f.label :youtube_url, "Youtube URL" %><br />
         <%= f.text_field :youtube_url, class:"form__field" %>
       </div>
 
