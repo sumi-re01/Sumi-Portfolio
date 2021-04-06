@@ -62,7 +62,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #devise
-gem 'devise'
+gem 'devise', git: "https://github.com/heartcombo/devise.git",  branch: "ca-omniauth-2"
 
 # Bootstra@
 gem 'bootstrap', '~> 4.5'
@@ -80,8 +80,10 @@ gem 'geocoder'
 # viewのJavaScriptの記述でインスタンス変数が使える
 gem 'gon'
 
-#SNS認証(google)
+#SNS認証(google,twitter)
 gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
+gem 'omniauth-github'
 
 # カレンダー
 gem "simple_calendar", "~> 2.4"
