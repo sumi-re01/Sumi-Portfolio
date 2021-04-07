@@ -10,15 +10,18 @@
 
   </head>
   <body>
+    <div class="layout">
 
-  <%= render 'layouts/menu' %>
-  <header class="top__header">
-    <%= render 'layouts/header' %>
-  </header>
+      <%= render 'layouts/menu' %>
+      <header class="top__header">
+        <%= render 'layouts/header' %>
+      </header>
 
-  <main class ="main-field">
-    <%= yield %>
-  </main>
+      <main class ="main-field">
+        <%= yield %>
+      </main>
+
+    </div>
 
   <%= javascript_include_tag 'jquery.min' %>
   <%= javascript_include_tag 'menu_trigger' %>
