@@ -21,6 +21,13 @@ class TravelsController < ApplicationController
     @travel_plans = @travel.travel_plans
   end
 
+  def sort
+    @travel= Travel.find(params[:id])
+    travel_plan = @travel.travel_plans(params[:from].to_i)
+    travel_plan.insert_at(params[:to].to_i + 1)
+    head :ok
+  end
+
 
   private
 

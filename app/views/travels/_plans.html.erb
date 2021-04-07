@@ -1,12 +1,16 @@
-<div class="plan__box">
+<ul class="plan__box" id="sortable_list">
   <% travel_plans.each do |travel_plan| %>
-   <div class="plan__wrap">
-     <div class="plan__item">
-        <%= travel_plan.plan %>
-     </div>
-     <div class="plan__item">
+    <li class="plan__wrap">
+      <div class="bar flex-center">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="plan__item">
+        <p><%= travel_plan.plan %></p>
+      </div>
+      <div class="btn flex-center">
         <%=link_to '✖', travel_travel_plan_path(travel_plan.id), method: :delete, remote:true %>
-     </div>
-   </div>
+      </div>
+    </li>
   <% end %>
-</div>
+</ul>
+

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
+    patch 'travels/:id/sort', to: 'travels#sort'
+
     resources :users, only: [:show, :edit, :update]
     resources :galleries, only: [:index, :new, :create, :edit, :update, :show, :destroy]
     resources :marks, only: [:create, :destroy]

@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
+
  $form_btn: #67c7c4;
  $link-color: black;
  $background-color: white;
@@ -81,7 +84,7 @@
   }
 
   #close_menu {
-    cursor: cell;
+    cursor: crosshair;
   }
 
   .nav__list {
@@ -171,47 +174,84 @@
 
 // travel
 
-#travel {
-  display: flex;
-  flex-wrap: wrap;
+  .travels__wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  #travels__form {
+    width: 230px;
+    padding: 0 15px;
+  }
+
+  .travels__box {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+// travels/showのフォーム
+  .travel__contents {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   #travel__form {
-    width:230px;
+    width: 230px;
+    padding: 20px 15px;
 
     .plan__field {
       width: 200px;
       height: 60px;
       margin-bottom: 10px;
     }
-
-    .plan__btn {
-      border-radius: 5px;
-      width: 200px;
-      height: 30px;
-      color: white;
-      background-color: $form_btn;
-    }
   }
-
 
   #travel__plans {
 
-    width: 60%;
+    width: 400px;
+
+    h2 {
+      margin: 0 20px 20px;
+    }
 
     .plan__box {
       width: 90%;
       margin: 20px auto;
+      background-color: #a4ede5;
     }
 
     .plan__wrap {
-      background-color: white;
-      border: 1px solid black;
-    }
-    .plan__item {
-      display: inline-block;
-      padding: 5px 10px;
-    }
+      display: flex;
+      height: 50px;
+      border-bottom: 1px solid black;
+      position: relative;
+
+      .bar {
+        cursor: crosshair;
+        width: 50px;
+        background: #81D8D0;
+      }
+      .btn {
+        width: 50px;
+        position: absolute;
+        right: 0;
+      }
+
+      .plan__item {
+        padding: 0 30px;
+        line-height: 50px;
+      }
+
+      .flex-center {
+        text-align: center;
+        line-height: 50px;
+       }
+     }
 
   }
-
-}
+  .sortable-chosen {
+    border: 2px solid white;
+    transform: scale( 1.1, 1.1);
+    background-color: #81D8D0;
+  }
