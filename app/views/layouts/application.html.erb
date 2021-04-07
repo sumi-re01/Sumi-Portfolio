@@ -9,50 +9,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
+  <body>
 
-  <body class="layout">
-    <header>
-        <div class="menu">
-            <nav>
-              <ul class="nav-ul">
-              <% if user_signed_in? %>
-                  <li class="nav-list">
-                    <%= link_to 'MY PAGE', user_path(current_user.id), class:"nav-btn" %>
-                  </li>
-                  <li class="nav-list">
-                    <%= link_to 'ITINERARY',  travels_path, class:"nav-btn" %>
-                  </li>
-                  <li class="nav-list">
-                    <%= link_to 'GALLERY', galleries_path, class:"nav-btn" %>
-                  </li>
-                  <li class="nav-list">
-                    <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:"nav-btn" %>
-                  </li>
-              <% else %>
-                  <li class="nav-list">
-                    <%= link_to 'TOP', root_path, class:"nav-btn" %>
-                  </li>
-                  <li class="nav-list">
-                    <%= link_to 'GALLERY', galleries_path, class:"nav-btn" %>
-                  </li>
-                  <li class="nav-list">
-                    <%= link_to 'LOG IN',  new_user_session_path, class:"nav-btn" %>
-                  </li>
-                  <li class="nav-list">
-                    <%= link_to 'FIRST VISIT', new_user_registration_path, class:"nav-btn" %>
-                  </li>
-              <% end %>
-              </ul>
-        </nav>
+  <%= render 'layouts/menu' %>
+  <header class="top__header">
+    <%= render 'layouts/header' %>
+  </header>
 
-        <%= link_to image_tag("logo.png", class:"logo"), root_path %>
+  <main class ="main-field">
+    <%= yield %>
+  </main>
 
-      </div>
-    </header>
-
-    <main class ="main-field">
-      <%= yield %>
-    </main>
-
+  <%= javascript_include_tag 'jquery.min' %>
+  <%= javascript_include_tag 'menu_trigger' %>
   </body>
 </html>

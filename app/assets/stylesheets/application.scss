@@ -13,9 +13,9 @@
  *= require_tree .
  *= require_self
  */
- $back-color: #67c7c4;
- $link-color: #67c7c4;
- $btn-back: #e0faff;
+ $form_btn: #67c7c4;
+ $link-color: black;
+ $background-color: #e0faff;
  $text-color: black;
 
  * {
@@ -33,7 +33,7 @@
    color: $text-color;
    font-family: 'Source Code Pro', monospace;
    position: relative;
-   background-color: $btn-back;
+   background-color: $background-color;
  }
 
   .field_with_errors {
@@ -44,55 +44,89 @@
  // main画面位置
 
 .main-field {
-  margin: 25px auto;
-  padding-left: 200px;
+  margin: 10px auto;
+  // padding-left: 200px;
 }
 
 .container {
-  margin-left: 20px;
+  width: 80%;
+  margin: 0 auto;
 }
 
+// Menuのレイアウト
 
-// header
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 200px;
-    background-color: $back-color;
+#side__navigation {
+  display: none;
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252,252,252,0.75);
+
+  .side__menu {
+    position: relative;
+    top: 50px;
+    left: 10px;
+    width: 250px;
+    padding: 20px 20px 20px 30px;
+    height: 80%;
+    // ティファニーブルー
+    background-color: rgba(104,195,197,0.8);
   }
 
-  .nav-ul {
-    margin: 30px auto;
-    text-align: center;
+  #close_menu {
+    cursor: cell;
   }
 
- .nav-list {
+  .nav__list {
     list-style: none;
-
-  .nav-btn {
-    width: 80%;
-    display: inline-block;
-    margin: 8px auto;
-    padding: 4%;
-    background-color: $btn-back;
-    transition: all 0.3s;
-
-    &:hover {
-      font-weight: 600;
-      width: 100%;
-      letter-spacing: 5px;
-      }
-    }
+    margin: 50px 0;
   }
 
+  .nav__item {
+    margin-bottom: 15px;
+  }
 
-  .logo {
+}
+
+// 上部ヘッダー
+.top__header {
+  z-index: 20;
+  position: sticky;
+  top: 0;
+  height: 95px;
+  padding: 0 30px;
+
+  .top__container {
+    display: flex;
+    height: 100px;
+    padding: 20px 30px 0;
+    background-color: white;
+    opacity: 0.5;
+  }
+
+  #menu_trigger {
+    line-height: 100px;
+    cursor: cell;
+  }
+
+  .top__navigation {
     position: absolute;
-    bottom: 50px;
-    width: 100%;
+    right: 20px;
+    bottom: 20px;
   }
+
+  .nav__list {
+    display: flex;
+    list-style: none;
+  }
+  .nav__item {
+    margin: 20px 30px 0;
+  }
+
+}
 
 // ページ名
 .page-name {
@@ -123,7 +157,7 @@
    margin: 20px auto;
    color: white;
    font-size: 20px;
-   background-color: $link-color;
+   background-color: $form_btn;
    border-radius: 3px;
    padding: 5px 10px;
    border: 1px solid white;
@@ -150,7 +184,7 @@
       width: 200px;
       height: 30px;
       color: white;
-      background-color: $link-color;
+      background-color: $form_btn;
     }
   }
 
