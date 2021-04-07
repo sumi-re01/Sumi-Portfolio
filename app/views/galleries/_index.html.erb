@@ -1,9 +1,9 @@
-<div class="gallery__box">
+<div class="galleries__box">
     <% @galleries.each do |gallery| %>
-      <div class="gallery__items">
-        <div class="gallery__image_box">
-          <%= attachment_image_tag gallery, :image, format: 'jpg', fallback: "no-image.jpeg", class:"gallery__image_item" %>
-          <span class="gallery__image_title"><%= gallery.title %></span>
+      <div class="galleies__items">
+        <div class="galleries__image_box">
+          <%= attachment_image_tag gallery, :image, format: 'jpg', fallback: "no-image.jpeg", class:"galleries__image_item" %>
+          <span class="galleries__image_title"><%= gallery.title %></span>
         </div>
         <%= link_to gallery_path(gallery.id) do %>
           <%= l gallery.created_at %>
