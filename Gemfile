@@ -100,3 +100,6 @@ gem 'bootstrap', '~> 4.5'
 
 # 環境変数
 gem 'dotenv-rails'
+
+# エラーメッセージの日本語化
+gem 'rails-i18n'

@@ -36,6 +36,11 @@
    background-color: $btn-back;
  }
 
+  .field_with_errors {
+    // エラーメッセージでのフォーム崩れ防止
+  display: contents;
+  }
+
  // main画面位置
 
 .main-field {
