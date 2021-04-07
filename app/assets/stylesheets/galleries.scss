@@ -45,21 +45,21 @@
 
 
 // 一覧画面
-.gallery__box {
+.galleries__box {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.gallery__items {
+.galleries__items {
   margin: 5px;
   width: 200px;
   height: 300px;
 }
 
-.gallery__image_box {
+.galleries__image_box {
 
-  .gallery__image_item {
+  .galleries__image_item {
     width: 200px;
     height: 200px;
   }
