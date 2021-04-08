@@ -18,7 +18,6 @@ class TravelsController < ApplicationController
   def show
     @travel_plan = TravelPlan.new
     @travel = Travel.find(params[:id])
-    @travel_plans = @travel.travel_plans
   end
 
   def sort

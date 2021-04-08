@@ -1,16 +1,18 @@
-<ul class="plan__box" id="sortable_list">
-  <% travel_plans.each do |travel_plan| %>
-    <li class="plan__wrap">
-      <div class="bar flex-center">
+<div class="plan__box" id="sortable_list">
+  <% travel.travel_plans.each do |travel_plan| %>
+    <div class="plan__wrap">
+      <div class="flex-center" id="bar">
         <i class="fa fa-bars"></i>
       </div>
       <div class="plan__item">
         <p><%= travel_plan.plan %></p>
       </div>
       <div class="btn flex-center">
-        <%=link_to '✖', travel_travel_plan_path(travel_plan.id), method: :delete, remote:true %>
+        <%=link_to '✖', travel_travel_plan_path(travel_plan.travel, travel_plan), method: :delete, remote:true %>
       </div>
-    </li>
+    </div>
   <% end %>
-</ul>
+  <%= hidden_field_tag :travel_id, travel.id %>
+  <%= javascript_include_tag 'Sortable.min' %>
+</div>
 

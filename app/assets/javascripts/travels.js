@@ -1,16 +1,20 @@
 /* global Sortable*/
-/* global $*/
+/* global $ */
 
 $(function() {
   let el = document.getElementById("sortable_list");
   if (el != null) {
-     Sortable.create($(el)[0]), {
-       delay: 110
-     };
+    var sortable = Sortable.create(el, {
+       handle: "#bar",
+       delay: 150,
+       onUpdate: function (evt) {
+        $.ajax({
+          url: 'travel/' + $("#travel_id").val() + '/sort',
+          type: 'PATCH',
+          data: { from: evt.oldIndex, to: evt.newIndex }
+        });
+        console.log("1");
+      }
+     });
   }
 });
-// onUpdate: (evt) ->
-//         $.ajax
-//           url: 'parent/' + $("#parent_id").val() + '/sort'
-//           type: 'patch'
-//           data: { from: evt.oldIndex, to: evt.newIndex }

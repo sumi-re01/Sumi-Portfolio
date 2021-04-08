@@ -6,7 +6,7 @@
     <div class="travel__contents">
 
         <div id="travel__form">
-          <%= form_with model: [@travel, @travel_plan], url: travel_travel_plans_path(@travel), remote: true do |f| %>
+          <%= form_with model: [@travel, @travel_plan], method: :post do |f| %>
           <div class="form__item">
               <%= f.text_area :plan ,class:"plan__field"%><br />
               <%= f.submit 'Add',class:"form__btn" %>
@@ -18,8 +18,7 @@
           <h2>Plan to : <%= @travel.itinerary %></h2>
 
           <div id="plans_index">
-            <%= render 'travels/plans', travel_plans: @travel_plans %>
-            <%= hidden_field_tag :travel_id, @travel.id %>
+            <%= render partial: 'travels/plans', locals: { travel: @travel } %>
           </div>
 
         </div>
@@ -27,4 +26,3 @@
   </div>
 </div>
 <%= javascript_include_tag 'travels' %>
-<%= javascript_include_tag 'Sortable.min' %>

@@ -52,7 +52,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
   width: 80%;
   margin: 0 auto;
   border-left: 1px solid rgba(0,0,0,0.5);
@@ -227,7 +227,7 @@
       border-bottom: 1px solid black;
       position: relative;
 
-      .bar {
+      #bar {
         cursor: crosshair;
         width: 50px;
         background: #81D8D0;

@@ -5,12 +5,21 @@
 
   <nav class="top__navigation">
       <ul class="nav__list">
+        <li class="nav__item">
+            <%= link_to 'GALLERY', galleries_path, class:"nav-btn" %>
+        </li>
+        <% if user_signed_in? %>
+          <li class="nav__item">
+              <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:"nav-btn" %>
+          </li>
+        <% else %>
           <li class="nav__item">
               <%= link_to 'LOG IN',  new_user_session_path, class:"nav-btn" %>
           </li>
           <li class="nav__item">
               <%= link_to 'FIRST VISIT', new_user_registration_path, class:"nav-btn" %>
           </li>
+        <% end %>
       </ul>
   </nav>
 
