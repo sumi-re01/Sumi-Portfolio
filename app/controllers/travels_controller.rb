@@ -21,7 +21,7 @@ class TravelsController < ApplicationController
   end
 
   def sort
-    @travel= Travel.find(params[:id])
+    @travel= Travel.find(params[:travel_id])
     travel_plan = @travel.travel_plans(params[:from].to_i)
     travel_plan.insert_at(params[:to].to_i + 1)
     head :ok
@@ -32,10 +32,6 @@ class TravelsController < ApplicationController
 
   def travel_params
     params.require(:travel).permit(:user_id, :itinerary, :date)
-  end
-
-  def travel_plan_params
-    params.require(:travel_plan).permit(:plan, :position)
   end
 
 end

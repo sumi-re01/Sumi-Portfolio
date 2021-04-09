@@ -201,7 +201,7 @@
     padding: 20px 15px;
 
     .plan__field {
-      width: 200px;
+      width: 100%x;
       height: 60px;
       margin-bottom: 10px;
     }
@@ -209,7 +209,8 @@
 
   #travel__plans {
 
-    width: 400px;
+    width: 600px;
+    margin: 0 auto;
 
     h2 {
       margin: 0 20px 20px;
