@@ -2,7 +2,7 @@
   <div id="user">
       <h1 class="page-name">MY PAGE</h1>
         <div class="user__wrap">
-            <%= attachment_image_tag @user, :profile_image, format: 'jpg', fallback: "no-image.jpeg", id: "prf-img" %>
+          <%= attachment_image_tag @user, :profile_image, format: 'jpg', fallback: "no-image.jpeg", id: "prf-img" %>
           <div class="user-index">
             <p class="name"><%= @user.name %></p>
             <%= link_to 'EDIT PROF', edit_user_path(@user.id), class: "btn" %>
