@@ -6,26 +6,40 @@
 // 詳細画面
 
 .gallery__wrap {
+  border-top: 1px solid rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
   display: flex;
   flex-wrap: wrap;
 }
 
 .gallery__left {
+  position: relative;
   width: 60%;
   padding-right: 10px;
 
-   .gallery__title {
-    margin-bottom: 20px;
-  }
+  .gallery__text {
+    h2 {
+      padding-left: 30px;
+      margin: 30px 0 20px 0;
+      &:after {
+        contents: "";
 
-   .gallery__body {
-    white-space: pre-wrap;
-    padding: 30px;
-    background-color: white;
+      }
+    }
+
+     p {
+      white-space: pre-wrap;
+      padding: 30px;
+      background-color: white;
+    }
   }
 
   .gallery__region {
+    width: 100%;
+    text-align: left;
     margin-top: 20px;
+    position: absolute;
+    bottom: 0;
   }
 
   #map {
@@ -37,14 +51,14 @@
 .gallery__right {
   width: 40%;
 
-  #img {
+  .image {
     width: 100%;
   }
 
 }
 
 
-// 一覧画面
+// galleries__index
 .galleries__box {
   width: 100%;
   display: flex;
@@ -57,11 +71,7 @@
   height: 300px;
 }
 
-.galleries__image_box {
-
-  .galleries__image_item {
+.galleies__image .image {
     width: 200px;
     height: 200px;
-  }
-
 }
