@@ -103,3 +103,6 @@ gem 'dotenv-rails'
 
 # エラーメッセージの日本語化
 gem 'rails-i18n'
+
+# font-awesome
+gem 'font-awesome-sass'

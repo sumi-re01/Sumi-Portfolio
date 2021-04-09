@@ -13,11 +13,9 @@
               <%= link_to 'ITINERARY',  travels_path, class:"nav-btn" %>
             </li>
             <li class="nav__item">
-              <%= link_to 'GALLERY', galleries_path, class:"nav-btn" %>
+              <%= link_to 'BOOKMARK', galleries_path, class:"nav-btn" %>
             </li>
-            <li class="nav__item">
-              <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:"nav-btn" %>
-            </li>
+
           <% else %>
             <li class="nav__item">
               <%= link_to 'TOP', root_path, class:"nav-btn" %>

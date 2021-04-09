@@ -2,32 +2,36 @@
   <div id="travel">
     <h1 class="page-name">ITINERARY</h1>
 
-    <div class="travel__form">
-      <%= form_with model:@travel, url: travels_path, local:true do |f| %>
-      <div class="form__item">
-          <%= f.label :itinerary %><br />
-          <%= f.text_field :itinerary, class:"plan__field" %>
+    <div class="travels__wrap">
+
+      <div id="travels__form">
+        <%= form_with model:@travel, url: travels_path, local:true do |f| %>
+        <div class="form__item">
+            <%= f.label :itinerary %><br />
+            <%= f.text_field :itinerary, class:"plan__field" %>
+        </div>
+        <div class="form__item">
+            <%= f.label :date %><br />
+            <%= f.date_field :date %>
+        </div>
+        <div class="form__item">
+            <%= f.submit 'CREATE', class:"form__btn" %>
+        </div>
+        <% end %>
       </div>
-      <div class="form__item">
-          <%= f.label :date %><br />
-          <%= f.date_field :date %>
-      </div>
-      <div class="form__item">
-          <%= f.submit 'CREATE', class:"form__btn" %>
-      </div>
+
+
+      <table class="travels__box">
+      <% @travels.each do |travel| %>
+        <tr>
+          <td><%= travel.date %></td>
+          <td><%= link_to travel.itinerary, travel_path(travel.id) %></td>
+          <td><%= link_to 'DELETE',  travel_path(travel.id), method: :destroy, class:"btn" %></td>
+        </tr>
       <% end %>
+      </table>
+
     </div>
-
-
-    <table>
-    <% @travels.each do |travel| %>
-      <tr>
-        <td><%= travel.date %></td>
-        <td><%= link_to travel.itinerary, travel_path(travel.id) %></td>
-        <td><%= link_to 'DELETE',  travel_path(travel.id), method: :destroy, class:"btn" %></td>
-      </tr>
-    <% end %>
-    </table>
 
   </div>
 </div>
