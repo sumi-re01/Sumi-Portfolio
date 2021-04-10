@@ -12,8 +12,8 @@ class Gallery < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, :if => :address_changed?
 
-  def marked_by?
-    marks.where(user_id. user.id).exists
+  def marked_by?(user)
+    marks.where(user_id: user.id).exists?
   end
 
 end
