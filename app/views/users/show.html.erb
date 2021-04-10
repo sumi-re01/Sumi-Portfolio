@@ -6,9 +6,12 @@
           <div class="user-index">
             <p class="name"><%= @user.name %></p>
             <%= link_to 'EDIT PROF', edit_user_path(@user.id), class: "btn" %>
-            <span class="btn">ブックマーク</span>
+            <btn class="btn">ブックマーク</span>
             <%= link_to 'NEW',  new_gallery_path, class: "btn" %>
           </div>
+        </div>
+        <div class="mark__gallery">
+          <%= render 'galleries/index', model: @mark %>
         </div>
         <div class="user__gallery">
           <%= render 'galleries/index', model: @galleries %>

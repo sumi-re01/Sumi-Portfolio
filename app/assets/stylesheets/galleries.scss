@@ -15,37 +15,38 @@
 .gallery__left {
   position: relative;
   width: 60%;
-  padding-right: 10px;
 
   .gallery__text {
+
+    margin-bottom: 10px;
     h2 {
       padding-left: 30px;
       margin: 30px 0 20px 0;
-      &:after {
-        contents: "";
-
-      }
     }
 
-     p {
+    .book-mark {
+      position: absolute;
+      right: 20;
+      top: 20;
+    }
+
+    p {
       white-space: pre-wrap;
       padding: 30px;
       background-color: white;
     }
-  }
+   }
 
-  .gallery__region {
-    width: 100%;
-    text-align: left;
-    margin-top: 20px;
-    position: absolute;
-    bottom: 0;
-  }
+   .gallery__region {
+      width: 100%;
+      text-align: left;
+      margin-top: 20px;
+      #map {
+       height: 200px;
+     }
+    }
 
-  #map {
-    width: 100%;
-    height: 300px;
-  }
+
 }
 
 .gallery__right {
@@ -55,8 +56,18 @@
     width: 100%;
   }
 
-}
+  .user_info {
+    display: wrap;
 
+    #prf-img {
+      display: inline-block;
+    }
+
+    span {
+      font-size: 20px;
+    }
+  }
+}
 
 // galleries__index
 .galleries__box {
