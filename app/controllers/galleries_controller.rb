@@ -1,5 +1,6 @@
 class GalleriesController < ApplicationController
-before_action :gallery_find, only: [:show, :edit, :update, :destroy]
+before_action :authenticate_user!,except: [:index, :show]
+before_action :set_gallery, only: [:show, :edit, :update, :destroy]
 
   def show
   end
@@ -29,10 +30,16 @@ before_action :gallery_find, only: [:show, :edit, :update, :destroy]
   end
 
   def edit
+    if @gallery.user == current_user
+      render :edit
+    else
+      redirect_to gallery_path(@gallery)
+    end
   end
 
   def update
-    if @gallery.update(gallery_params)
+    if @gallery.user == current_user
+      @gallery.update(gallery_params)
       redirect_to gallery_path(@gallery.id)
     else
       render :edit
@@ -44,9 +51,11 @@ before_action :gallery_find, only: [:show, :edit, :update, :destroy]
     redirect_to user_path(current_user.id)
   end
 
+
+
   private
 
-  def gallery_find
+  def set_gallery
     @gallery = Gallery.find(params[:id])
   end
 

@@ -1,6 +1,8 @@
 <div class="container">
   <div id="user">
+
       <h1 class="page-name">MY PAGE</h1>
+
         <div class="user__wrap">
           <%= attachment_image_tag @user, :profile_image, format: 'jpg', fallback: "no-image.jpeg", id: "prf-img" %>
           <div class="user-index">
@@ -10,6 +12,7 @@
             <%= link_to 'NEW',  new_gallery_path, class: "btn" %>
           </div>
         </div>
+
         <div class="user__gallery">
           <%= render 'galleries/index', model: @galleries %>
         </div>
