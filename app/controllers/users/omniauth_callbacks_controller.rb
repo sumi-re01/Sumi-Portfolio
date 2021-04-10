@@ -42,7 +42,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if @user.persisted?
       sign_in_and_redirect @user, event: :authentication
-      set_flash_message(:notice, :success, kind: "#{request.env["omniauth.auth"].provider}".capitalize) if is_navigational_format?
     else
       @sns_id = sns_info[:sns].id
       render "devise/registrations/new"

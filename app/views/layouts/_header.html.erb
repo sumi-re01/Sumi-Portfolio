@@ -10,6 +10,15 @@
         </li>
         <% if user_signed_in? %>
           <li class="nav__item">
+              <%= link_to 'MY PAGE', user_path(current_user.id), class:"nav-btn" %>
+          </li>
+          <li class="nav__item">
+              <%= link_to 'ITINERARY',  travels_path, class:"nav-btn" %>
+          </li>
+          <li class="nav__item">
+              <%= link_to 'BOOKMARK', galleries_path, class:"nav-btn" %>
+          </li>
+          <li class="nav__item">
               <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:"nav-btn" %>
           </li>
         <% else %>
