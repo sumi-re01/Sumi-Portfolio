@@ -63,7 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #devise
 gem 'devise', git: "https://github.com/heartcombo/devise.git",  branch: "ca-omniauth-2"
 
-# Bootstra@
+# Bootstrap
 gem 'bootstrap', '~> 4.5'
 
 # jQuery
@@ -99,6 +99,9 @@ gem 'bootstrap', '~> 4.5'
 
 # 環境変数
 gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
 
 # エラーメッセージの日本語化
 gem 'rails-i18n'
