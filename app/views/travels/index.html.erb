@@ -6,6 +6,7 @@
 
       <div id="travels__form">
         <%= form_with model:@travel, url: travels_path, local:true do |f| %>
+           <%= render 'layouts/errors', model: f.object %>
         <div class="form__item">
             <%= f.label :itinerary, "旅行名" %><br />
             <%= f.text_field :itinerary, placeholder: "京都旅行 etc.",  class: "plan__field" %>

@@ -18,7 +18,7 @@
 
  $form_btn: #67c7c4;
  $link-color: black;
- $background-color: white;
+ $background-color: #e5e2d1;
  $text-color: black;
 
  * {
@@ -47,6 +47,7 @@
  }
 
  .layout {
+   height: 100vh;
    color: $text-color;
    font-family: 'Source Code Pro', monospace;
    position: relative;
@@ -55,17 +56,16 @@
 
  // main画面位置
 
-.main-field {
-  margin: 10px auto;
-
+ main {
+  background-color: $background-color;
 }
 
 .container {
   height: 100%;
   width: 80%;
   margin: 0 auto;
-  border-left: 1px solid rgba(0,0,0,0.5);
-  border-right: 1px solid rgba(0,0,0,0.5);
+  // border-left: 1px solid rgba(0,0,0,0.5);
+  // border-right: 1px solid rgba(0,0,0,0.5);
 }
 
 

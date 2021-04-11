@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
-
+    get '/users', to: redirect("/users/sign_up")
     resources :users, only: [:show, :edit, :update]
     resources :galleries, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
       resources :marks, only: [:create, :destroy]

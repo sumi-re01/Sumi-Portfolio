@@ -1,5 +1,6 @@
 <div class="galleries__box">
     <% @galleries.each do |gallery| %>
+    
       <div class="galleies__items">
         <div class="galleies__image">
           <%= link_to gallery_path(gallery.id) do %>
