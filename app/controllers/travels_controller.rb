@@ -12,6 +12,7 @@ class TravelsController < ApplicationController
     if travel.save
       redirect_to travels_path
     else
+      @travels = current_user.travels.all
       render :index
     end
   end
