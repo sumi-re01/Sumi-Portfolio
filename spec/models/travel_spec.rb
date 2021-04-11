@@ -30,5 +30,15 @@ RSpec.describe "Travelモデルに関するテスト", type: :model do
   end
 
   describe 'アソーシエイション' do
+    context 'Userモデルとの関係' do
+        it 'N:1となっている' do
+          expect(Travel.reflect_on_association(:users).macro).to eq :belongs_to
+        end
+    end
+    context 'TravelPlanモデルとの関係' do
+        it '1:Nとなっている' do
+          expect(Travel.reflect_on_association(:travel_plans).macro).to eq :has_many
+        end
+    end
   end
 end
